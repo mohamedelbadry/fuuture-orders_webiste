@@ -165,6 +165,45 @@
     });
   }
 
+  /* ---------------------------------------------- mobile menu (☰) ------- */
+  function initMobileMenu() {
+    var btn = document.querySelector('.menu-btn');
+    var nav = document.getElementById('site-nav');
+    var hdr = document.querySelector('.hdr');
+    if (!btn || !nav) return;
+
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      btn.classList.toggle('open', open);
+      if (hdr) hdr.classList.toggle('menu-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('open'));
+    });
+
+    // إغلاق عند اختيار رابط
+    var links = nav.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function () { setOpen(false); });
+    }
+
+    // إغلاق عند النقر خارج القائمة أو بزر Escape
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+
+    // إغلاق عند التحول لشاشة كبيرة
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900) setOpen(false);
+    });
+  }
+
   /* --------------------------------------------- language toggle wiring -- */
   function initLangButtons() {
     var btns = document.querySelectorAll('.lang-btn');
@@ -185,6 +224,7 @@
 
     // 3) السلوكيات
     initLangButtons();
+    initMobileMenu();
     initHeaderScroll();
     initCounters();
     initReveal();
