@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تواصل معنا | طلبات المستقبل التجارية</title>
+<meta name="description" content="راسلنا لطلب عرض سعر أو للاستفسار عن خدماتنا — طلبات المستقبل التجارية، الرياض.">
+<meta name="theme-color" content="#1A2053">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function () {
+    try {
+      var l = localStorage.getItem('fo-lang');
+      if (l === 'en') {
+        var h = document.documentElement;
+        h.className += ' lang-boot';
+        h.setAttribute('lang', 'en');
+        h.setAttribute('dir', 'ltr');
+      }
+    } catch (e) {}
+  })();
+  window.FO_PAGE = 'contact';
+
+  /* ======================================================================
+     مفتاح Web3Forms — استبدل القيمة أدناه بمفتاحك من https://web3forms.com
+     (سجّل بريدك هناك مجاناً ويصلك المفتاح فوراً على الإيميل)
+     ====================================================================== */
+  window.WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
+</script>
+</head>
+<body class="lang-ar">
+<div class="site">
+
+  <header class="hdr hdr--solid">
+    <div class="hdr-inner">
+      <a class="logo-wrap" href="index.html">
+        <img class="logo-color" src="assets/logo.png" alt="طلبات المستقبل" data-i18n-alt="brand">
+      </a>
+      <nav class="nav">
+        <a class="nav-link"        href="index.html"     data-i18n="nav.home">الرئيسية</a>
+        <a class="nav-link"        href="Services.html"  data-i18n="nav.services">الخدمات</a>
+        <a class="nav-link"        href="Projects.html"  data-i18n="nav.projects">المشاريع</a>
+        <a class="nav-link active" href="Contact.html"   data-i18n="nav.contact">تواصل معنا</a>
+      </nav>
+      <div class="hdr-actions">
+        <button class="lang-btn" type="button" title="English" aria-label="Switch to English">
+          <span class="globe" aria-hidden="true"><span class="g-v"></span><span class="g-h"></span><span class="g-e"></span></span>
+          <span class="lang-code" data-lang-code>EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="contact-grid">
+
+    <!-- ------------------------------------------------ معلومات التواصل -->
+    <div>
+      <div class="eyebrow" data-i18n="contactPage.tag">تواصل معنا</div>
+      <h1 data-i18n="contactPage.title">جاهزون للإجابة على استفساراتك</h1>
+      <p class="lead" data-i18n="contactPage.sub">راسلنا لطلب عرض سعر أو للاستفسار عن خدماتنا، وسيتواصل معك فريقنا خلال 24 ساعة عمل.</p>
+
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">&#9742;</div>
+          <div>
+            <div class="info-label" data-i18n="contactPage.info.phoneLabel">الهاتف</div>
+            <a class="info-value ltr" href="tel:+966112345678" data-i18n="contactPage.info.phone">+966 11 234 5678</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">&#9993;</div>
+          <div>
+            <div class="info-label" data-i18n="contactPage.info.emailLabel">البريد الإلكتروني</div>
+            <a class="info-value ltr" href="mailto:info@futureorders.sa" data-i18n="contactPage.info.email">info@futureorders.sa</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">&#9678;</div>
+          <div>
+            <div class="info-label" data-i18n="contactPage.info.addressLabel">العنوان</div>
+            <div class="info-value" data-i18n="contactPage.info.address">الرياض، المملكة العربية السعودية</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">&#128340;</div>
+          <div>
+            <div class="info-label" data-i18n="contactPage.info.hoursLabel">ساعات العمل</div>
+            <div class="info-value" data-i18n="contactPage.info.hours">الأحد - الخميس، 8 ص - 5 م</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------- النموذج -->
+    <div class="form-card">
+
+      <!-- رسالة النجاح (مخفية حتى الإرسال) -->
+      <div class="form-success is-hidden" id="form-success">
+        <div class="tick" aria-hidden="true">&#10003;</div>
+        <h3 data-i18n="contactPage.form.successTitle">تم استلام طلبك</h3>
+        <p data-i18n="contactPage.form.successSub">شكرًا لتواصلك معنا، سيقوم فريقنا بالرد عليك خلال 24 ساعة عمل.</p>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <h3 data-i18n="contactPage.form.title">اطلب عرض سعر</h3>
+        <div class="form-stack">
+
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="f-name" data-i18n="contactPage.form.name">الاسم الكامل</label>
+              <input class="form-field" id="f-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div>
+              <label class="form-label" for="f-company" data-i18n="contactPage.form.company">اسم الجهة / الشركة</label>
+              <input class="form-field" id="f-company" name="company" type="text" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="f-phone" data-i18n="contactPage.form.phone">رقم الهاتف</label>
+              <input class="form-field ltr" id="f-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div>
+              <label class="form-label" for="f-email" data-i18n="contactPage.form.email">البريد الإلكتروني</label>
+              <input class="form-field ltr" id="f-email" name="email" type="email" required autocomplete="email">
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="f-type" data-i18n="contactPage.form.type">نوع الطلب</label>
+            <select class="form-field" id="f-type" name="type">
+              <option value="" data-i18n="contactPage.form.typeOptions.0">اختر نوع الطلب</option>
+              <option data-i18n="contactPage.form.typeOptions.1" data-i18n-value="contactPage.form.typeOptions.1">توريد حكومي</option>
+              <option data-i18n="contactPage.form.typeOptions.2" data-i18n-value="contactPage.form.typeOptions.2">مشروع مكتبي</option>
+              <option data-i18n="contactPage.form.typeOptions.3" data-i18n-value="contactPage.form.typeOptions.3">طلب فردي</option>
+              <option data-i18n="contactPage.form.typeOptions.4" data-i18n-value="contactPage.form.typeOptions.4">استفسار عام</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label" for="f-message" data-i18n="contactPage.form.message">تفاصيل الطلب</label>
+            <textarea class="form-field" id="f-message" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- مصيدة السبام (مخفية عن المستخدم) -->
+          <input type="checkbox" name="botcheck" id="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <p class="form-error" id="form-error" data-i18n="contactPage.form.error">تعذّر إرسال الطلب. يرجى المحاولة مرة أخرى أو مراسلتنا على البريد الإلكتروني مباشرة.</p>
+
+          <button class="btn-gold btn-gold--lg" type="submit" id="submit-btn" data-i18n="contactPage.form.submit">إرسال الطلب</button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <footer class="footer--slim">
+    <div data-i18n="rights">© 2026 طلبات المستقبل التجارية. جميع الحقوق محفوظة.</div>
+  </footer>
+
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script>
+/* ==========================================================================
+   إرسال النموذج عبر Web3Forms (مجاني — يرسل الرسائل إلى بريدك)
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var form    = document.getElementById('contact-form');
+  var success = document.getElementById('form-success');
+  var errorEl = document.getElementById('form-error');
+  var btn     = document.getElementById('submit-btn');
+  if (!form) return;
+
+  function lang() { return foGetLang(); }
+  function txt(path) { return foTranslate('contactPage.form.' + path, lang()); }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.classList.remove('show');
+
+    // تحقق بسيط من الحقول المطلوبة
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    var key = window.WEB3FORMS_ACCESS_KEY;
+    if (!key || key === 'YOUR_ACCESS_KEY_HERE') {
+      errorEl.textContent = lang() === 'ar'
+        ? 'لم يتم إعداد مفتاح Web3Forms بعد. افتح ملف Contact.html وضع مفتاحك في WEB3FORMS_ACCESS_KEY.'
+        : 'Web3Forms access key is not configured yet. Open Contact.html and set WEB3FORMS_ACCESS_KEY.';
+      errorEl.classList.add('show');
+      return;
+    }
+
+    var fd = new FormData(form);
+    var payload = {
+      access_key: key,
+      subject: (lang() === 'ar' ? 'طلب جديد من موقع طلبات المستقبل' : 'New request from Future Orders website'),
+      from_name: 'Future Orders Website',
+      name:     fd.get('name')    || '',
+      company:  fd.get('company') || '',
+      phone:    fd.get('phone')   || '',
+      email:    fd.get('email')   || '',
+      type:     fd.get('type')    || '',
+      message:  fd.get('message') || '',
+      botcheck: fd.get('botcheck') ? true : false
+    };
+
+    var original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = txt('sending');
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.success) {
+          form.classList.add('is-hidden');
+          success.classList.remove('is-hidden');
+        } else {
+          throw new Error((data && data.message) || 'failed');
+        }
+      })
+      .catch(function () {
+        errorEl.textContent = txt('error');
+        errorEl.classList.add('show');
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = original;
+      });
+  });
+})();
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
